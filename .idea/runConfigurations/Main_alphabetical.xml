@@ -1,7 +1,7 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="Main_alphabetical" type="Application" factoryName="Application" show_console_on_std_err="true">
     <option name="MAIN_CLASS_NAME" value="org.mario.Main" />
-    <module name="test-project" />
+    <module name="amazon-berkeley-objects" />
     <option name="PROGRAM_PARAMETERS" value="&quot;src/main/resources/listings/alphabetical_files&quot; &quot;src/main/resources/generated-files/orchestrator-file-alphabetical.json&quot;" />
     <extension name="coverage">
       <pattern>
