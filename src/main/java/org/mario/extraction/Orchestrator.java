@@ -9,7 +9,7 @@ public class Orchestrator {
         List<String> masterStringList = writer.buildJson(folderName);
         int suffix = 0;
         for (String intermediateString : masterStringList) {
-            String newTargetPath = targetPath.replace(".json","_") + suffix + ".json";
+            String newTargetPath = targetPath.replace(".json", "_") + suffix + ".json";
             writer.saveFile(newTargetPath, intermediateString);
             suffix += 1;
         }
