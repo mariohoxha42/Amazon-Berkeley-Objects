@@ -19,7 +19,7 @@ public class Writer {
         file.close();
     }
 
-    public void orchestrator(String folderName, String targetPath) throws IOException {
+    public void extractionOrchestrator(String folderName, String targetPath) throws IOException {
         String jsonString = buildJson(folderName);
         saveFile(targetPath, jsonString);
     }

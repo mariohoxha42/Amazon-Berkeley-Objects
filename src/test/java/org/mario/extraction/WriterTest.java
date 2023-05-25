@@ -32,6 +32,6 @@ public class WriterTest {
         Writer writer = new Writer();
         String folderName = "src/test/resources/listings";
         String targetPath = "target/output-test-files/test-file.json";
-        writer.orchestrator(folderName, targetPath);
+        writer.extractionOrchestrator(folderName, targetPath);
     }
 }
