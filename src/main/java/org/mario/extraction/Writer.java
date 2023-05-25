@@ -8,19 +8,14 @@ import java.util.List;
 import java.util.Map;
 
 public class Writer {
-    public String buildJson(String folderName) throws IOException {
+    public static String buildJson(String folderName) throws IOException {
         List<Map> mapList = Parser.parseFolder(folderName);
         return new Gson().toJson(mapList);
     }
 
-    public void saveFile(String targetPath, String jsonString) throws IOException {
+    public static void saveFile(String targetPath, String jsonString) throws IOException {
         FileWriter file = new FileWriter(targetPath);
         file.write(jsonString);
         file.close();
-    }
-
-    public void extractionOrchestrator(String folderName, String targetPath) throws IOException {
-        String jsonString = buildJson(folderName);
-        saveFile(targetPath, jsonString);
     }
 }
