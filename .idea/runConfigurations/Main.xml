@@ -2,7 +2,7 @@
   <configuration default="false" name="Main" type="Application" factoryName="Application" nameIsGenerated="true" show_console_on_std_err="true">
     <option name="MAIN_CLASS_NAME" value="org.mario.Main" />
     <module name="test-project" />
-    <option name="PROGRAM_PARAMETERS" value="-Xmx2048m &quot;src/main/resources/listings&quot; &quot;target/generated-sources/orchestrator-file.json&quot;" />
+    <option name="PROGRAM_PARAMETERS" value="&quot;src/main/resources/listings&quot; &quot;target/generated-sources/orchestrator-file.json&quot; -Xmx2048m" />
     <extension name="coverage">
       <pattern>
         <option name="PATTERN" value="org.mario.*" />
