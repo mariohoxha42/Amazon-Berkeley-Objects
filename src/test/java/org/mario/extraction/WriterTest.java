@@ -21,7 +21,7 @@ public class WriterTest {
         jsonObject.addProperty("key-2", "value-2");
         String jsonString = new Gson().toJson(jsonObject);
 
-        String targetPath = "target/output-test-files/test-file.json";
+        String targetPath = "target/generated-test-sources/test-save-file.json";
 
         Writer writer = new Writer();
         writer.saveFile(targetPath, jsonString);
@@ -31,7 +31,7 @@ public class WriterTest {
     public void orchestratorTest() throws IOException {
         Writer writer = new Writer();
         String folderName = "src/test/resources/listings";
-        String targetPath = "target/output-test-files/test-file.json";
+        String targetPath = "target/generated-test-sources/test-orchestrator-file.json";
         writer.extractionOrchestrator(folderName, targetPath);
     }
 }
