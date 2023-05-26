@@ -1,0 +1,16 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Main_numerical_part_2" type="Application" factoryName="Application" show_console_on_std_err="true">
+    <option name="MAIN_CLASS_NAME" value="org.mario.Main" />
+    <module name="amazon-berkeley-objects" />
+    <option name="PROGRAM_PARAMETERS" value="&quot;src/main/resources/listings/numerical_files/part_2&quot; &quot;src/main/resources/generated-files/orchestrator-file-numerical_part_2.json&quot;" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="org.mario.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
