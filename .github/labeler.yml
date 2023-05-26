@@ -16,3 +16,6 @@ test-files:
 
 dependencies:
   - pom.xml
+
+main:
+  - src/main/java/org/mario/Main.java
