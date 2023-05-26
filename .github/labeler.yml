@@ -1,0 +1,18 @@
+---
+build:
+  - .github/**/*
+
+main-code:
+  - src/main/**/*
+
+main-files:
+  - src/main/**/*.{json,txt}
+
+test-code:
+  - src/test/**/*
+
+test-files:
+  - src/test/**/*.{json,txt}
+
+dependencies:
+  - pom.xml
