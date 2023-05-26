@@ -1,12 +1,24 @@
 package org.mario;
 
-import org.mario.extraction.Orchestrator;
+import org.mario.analysis.AnalysisOrchestrator;
+import org.mario.extraction.ExtractionOrchestrator;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
-        Orchestrator orchestrator = new Orchestrator();
-        orchestrator.extractionOrchestrator(args[0], args[1]);
-    }
+	public static void main(String[] args) throws IOException {
+		ExtractionOrchestrator extractionOrchestrator = new ExtractionOrchestrator();
+		AnalysisOrchestrator analysisOrchestrator = new AnalysisOrchestrator();
+		
+		String rawFolderName = args[0];
+		String extractionTargetPath = args[1];
+		extractionOrchestrator.extractionOrchestrator(rawFolderName, extractionTargetPath);
+		
+		List<String> keySourceSplit = new ArrayList<>(List.of(extractionTargetPath.split("/")));
+		String keySourcePath = String.join("/", keySourceSplit.subList(0, 4));
+		String keyTargetPath = keySourcePath.replace("generated", "key");
+		analysisOrchestrator.analysisOrchestrator(keySourcePath, keyTargetPath);
+	}
 }
