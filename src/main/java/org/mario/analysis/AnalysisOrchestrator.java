@@ -8,7 +8,7 @@ public class AnalysisOrchestrator {
         KeySorter keySorter = new KeySorter();
         KeyWriter keyWriter = new KeyWriter();
 
-        HashSet<HashSet<String>> masterSet= keySorter.collectKeys(keySourcePath);
+        HashSet<HashSet<String>> masterSet = keySorter.collectKeys(keySourcePath);
 
         String masterString = keyWriter.writeKeySets(masterSet);
         keyWriter.saveKeyFiles(masterString, keyTargetPath, "masterSet.txt");

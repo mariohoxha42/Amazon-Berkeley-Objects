@@ -9,7 +9,7 @@ public class MainTest {
     public void testMain() throws IOException {
         String rawFolderName = "src/test/resources/listings";
         String extractionTargetPath = "src/test/resources/generated-test-files/test-orchestrator-file.json";
-        String [] args = {rawFolderName, extractionTargetPath};
+        String[] args = {rawFolderName, extractionTargetPath};
         Main.main(args);
     }
 }

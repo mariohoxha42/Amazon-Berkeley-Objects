@@ -17,7 +17,7 @@ public class Main {
         extractionOrchestrator.extractionOrchestrator(rawFolderName, extractionTargetPath);
 
         List<String> keySourceSplit = new ArrayList<>(List.of(extractionTargetPath.split("/")));
-        String keySourcePath = String.join("/",keySourceSplit.subList(0,4));
+        String keySourcePath = String.join("/", keySourceSplit.subList(0, 4));
         String keyTargetPath = keySourcePath.replace("generated", "key");
         analysisOrchestrator.analysisOrchestrator(keySourcePath, keyTargetPath);
     }
