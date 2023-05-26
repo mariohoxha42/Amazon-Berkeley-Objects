@@ -13,10 +13,10 @@ import java.util.Map;
 
 public class Parser {
 
-    public List<Map> parseFile(String filePath, String fileName) throws IOException {
+    public List<Map> parseFile(String individualRawFilePath, String individualRawFileName) throws IOException {
 
-        String fullPath = filePath + "/" + fileName;
-        InputStream is = Orchestrator.class.getClassLoader().getResourceAsStream(fullPath);
+        String fullPath = individualRawFilePath + "/" + individualRawFileName;
+        InputStream is = ExtractionOrchestrator.class.getClassLoader().getResourceAsStream(fullPath);
         Reader inputReader = new InputStreamReader(is, StandardCharsets.UTF_8);
 
         Gson gson = new GsonBuilder().create();
@@ -34,25 +34,25 @@ public class Parser {
         return mapList;
     }
 
-    public List<List<Map>> parseFolder(String filePath) throws IOException {
+    public List<List<Map>> parseFolder(String rawFolderName) throws IOException {
 
         List<List<Map>> masterMapList = new ArrayList<>();
         List<Map> intermediateList = new ArrayList<>();
-        File folder = new File(filePath);
+        File folder = new File(rawFolderName);
         File[] files = folder.listFiles();
 
         for (File file : files) {
             if (file.isFile()) {
-                String individualFilePath = filePath.replaceAll("src/.*/resources/", "");
-                System.out.println("File is " + individualFilePath + "/" + file.getName());
-                List<Map> fileList = parseFile(individualFilePath, file.getName());
+                String individualRawFilePath = rawFolderName.replaceAll("src/.*/resources/", "");
+                System.out.println("File is " + individualRawFilePath + "/" + file.getName());
+                List<Map> fileList = parseFile(individualRawFilePath, file.getName());
                 if (intermediateList.size() > 5000) {
                     masterMapList.add(fileList);
                 } else {
                     intermediateList.addAll(fileList);
                 }
             } else if (file.isDirectory()) {
-                String newFilePath = filePath + "/" + file.getName();
+                String newFilePath = rawFolderName + "/" + file.getName();
                 List<List<Map>> directoryList = parseFolder(newFilePath);
                 masterMapList.addAll(directoryList);
             }
