@@ -3,7 +3,7 @@ package org.mario.model.raw;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class AboModelCoreMetadata extends AboCoreMetadata {
+public class AboModelMetadata extends AboCoreMetadata {
 	private String model_id;
 	private String model_name;
 	private String model_number;

@@ -1,4 +1,4 @@
-package org.mario.extract;
+package org.mario.process.extract;
 
 import com.google.gson.Gson;
 

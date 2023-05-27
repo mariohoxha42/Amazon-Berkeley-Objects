@@ -1,9 +1,9 @@
-package org.mario.extract;
+package org.mario.process.extract;
 
 import java.io.IOException;
 import java.util.List;
 
-import static org.mario.utils.Utils.saveFile;
+import static org.mario.process.utils.Utils.saveFile;
 
 public class ExtractionOrchestrator {
 	public void extractionOrchestrator(String rawFolderName, String extractionTargetPath) throws IOException {

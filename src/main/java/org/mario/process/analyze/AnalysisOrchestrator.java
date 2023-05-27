@@ -1,9 +1,9 @@
-package org.mario.analyze;
+package org.mario.process.analyze;
 
 import java.io.IOException;
 import java.util.HashSet;
 
-import static org.mario.utils.Utils.saveFile;
+import static org.mario.process.utils.Utils.saveFile;
 
 public class AnalysisOrchestrator {
 	public void analysisOrchestrator(String keySourcePath, String keyTargetPath) throws IOException {

@@ -1,4 +1,4 @@
-package org.mario.analyze;
+package org.mario.process.analyze;
 
 import java.util.HashSet;
 

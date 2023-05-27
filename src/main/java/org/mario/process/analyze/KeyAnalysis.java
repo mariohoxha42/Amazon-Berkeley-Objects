@@ -1,15 +1,14 @@
-package org.mario.analyze;
+package org.mario.process.analyze;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import org.apache.commons.io.IOUtils;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
-import java.nio.charset.StandardCharsets;
 import java.util.HashSet;
 import java.util.Map;
+
+import static org.mario.process.utils.Utils.readFile;
 
 public class KeyAnalysis {
 	Gson gson = new GsonBuilder().create();
@@ -17,8 +16,7 @@ public class KeyAnalysis {
 	public HashSet<HashSet<String>> analyzeFile(String individualKeySourceFilePath, String individualKeySourceFileName) throws IOException {
 		HashSet<HashSet<String>> masterSet = new HashSet<>();
 		String fullPath = individualKeySourceFilePath + "/" + individualKeySourceFileName;
-		InputStream is = KeyAnalysis.class.getClassLoader().getResourceAsStream(fullPath);
-		String inputString = IOUtils.toString(is, StandardCharsets.UTF_8);
+		String inputString = readFile(fullPath,this.getClass());
 		HashSet<Map> mapList = gson.fromJson(inputString, HashSet.class);
 		for (Map map : mapList) {
 			HashSet<String> keySet = new HashSet<>();

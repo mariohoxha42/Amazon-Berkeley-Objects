@@ -1,6 +1,6 @@
 package org.mario.model.raw;
 
-public class AboItemCoreMetadata extends AboCoreMetadata {
+public class AboItemMetadata extends AboCoreMetadata {
 	private String item_dimensions;
 	private String item_keywords;
 	private String item_shape;

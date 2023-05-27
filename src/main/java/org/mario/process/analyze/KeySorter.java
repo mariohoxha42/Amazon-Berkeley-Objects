@@ -1,4 +1,4 @@
-package org.mario.analyze;
+package org.mario.process.analyze;
 
 import java.io.IOException;
 import java.util.HashSet;
