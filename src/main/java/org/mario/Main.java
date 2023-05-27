@@ -1,7 +1,7 @@
 package org.mario;
 
-import org.mario.analysis.AnalysisOrchestrator;
-import org.mario.extraction.ExtractionOrchestrator;
+import org.mario.analyze.AnalysisOrchestrator;
+import org.mario.extract.ExtractionOrchestrator;
 
 import java.io.IOException;
 import java.util.ArrayList;
