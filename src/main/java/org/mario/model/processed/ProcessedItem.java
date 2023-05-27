@@ -1,9 +1,6 @@
-package org.mario.model.raw;
+package org.mario.model.processed;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
-@JsonIgnoreProperties(ignoreUnknown = true)
-public class AboItemMetadata extends AboCoreMetadata {
+public class ProcessedItem extends ProcessedCore {
 	private String item_dimensions;
 	private String item_keywords;
 	private String item_shape;

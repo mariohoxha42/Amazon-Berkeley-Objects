@@ -16,7 +16,7 @@ public class KeyAnalysis {
 	public HashSet<HashSet<String>> analyzeFile(String individualKeySourceFilePath, String individualKeySourceFileName) throws IOException {
 		HashSet<HashSet<String>> masterSet = new HashSet<>();
 		String fullPath = individualKeySourceFilePath + "/" + individualKeySourceFileName;
-		String inputString = readFile(fullPath,this.getClass());
+		String inputString = readFile(fullPath, this.getClass());
 		HashSet<Map> mapList = gson.fromJson(inputString, HashSet.class);
 		for (Map map : mapList) {
 			HashSet<String> keySet = new HashSet<>();
