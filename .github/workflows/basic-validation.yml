@@ -1,0 +1,18 @@
+name: Basic validation
+
+on:
+  pull_request:
+    paths-ignore:
+      - '**.md'
+  push:
+    branches:
+      - master
+      - release/*
+      - develop
+    paths-ignore:
+      - '**.md'
+
+jobs:
+  call-basic-validation:
+    name: Basic validation
+    uses: actions/reusable-workflows/.github/workflows/basic-validation.yml@main
