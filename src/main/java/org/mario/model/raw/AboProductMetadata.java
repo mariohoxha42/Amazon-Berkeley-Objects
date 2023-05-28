@@ -2,87 +2,89 @@ package org.mario.model.raw;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import java.util.ArrayList;
+
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class AboProductMetadata extends AboCoreMetadata {
-	private String bullet_point;
-	private String color;
-	private String color_code;
-	private String fabric_type;
-	private String finish_type;
-	private String material;
-	private String pattern;
-	private String product_description;
-	private String style;
+	private ArrayList bullet_point;
+	private ArrayList color;
+	private ArrayList color_code;
+	private ArrayList fabric_type;
+	private ArrayList finish_type;
+	private ArrayList material;
+	private ArrayList pattern;
+	private ArrayList product_description;
+	private ArrayList style;
 	
-	public String getBullet_point() {
+	public ArrayList getBullet_point() {
 		return bullet_point;
 	}
 	
-	public void setBullet_point(String bullet_point) {
+	public void setBullet_point(ArrayList bullet_point) {
 		this.bullet_point = bullet_point;
 	}
 	
-	public String getColor() {
+	public ArrayList getColor() {
 		return color;
 	}
 	
-	public void setColor(String color) {
+	public void setColor(ArrayList color) {
 		this.color = color;
 	}
 	
-	public String getColor_code() {
-		return color_code;
-	}
-	
-	public void setColor_code(String color_code) {
-		this.color_code = color_code;
-	}
-	
-	public String getFabric_type() {
-		return fabric_type;
-	}
-	
-	public void setFabric_type(String fabric_type) {
-		this.fabric_type = fabric_type;
-	}
-	
-	public String getFinish_type() {
-		return finish_type;
-	}
-	
-	public void setFinish_type(String finish_type) {
-		this.finish_type = finish_type;
-	}
-	
-	public String getMaterial() {
+	public ArrayList getMaterial() {
 		return material;
 	}
 	
-	public void setMaterial(String material) {
+	public void setMaterial(ArrayList material) {
 		this.material = material;
 	}
 	
-	public String getPattern() {
-		return pattern;
-	}
-	
-	public void setPattern(String pattern) {
-		this.pattern = pattern;
-	}
-	
-	public String getProduct_description() {
-		return product_description;
-	}
-	
-	public void setProduct_description(String product_description) {
-		this.product_description = product_description;
-	}
-	
-	public String getStyle() {
+	public ArrayList getStyle() {
 		return style;
 	}
 	
-	public void setStyle(String style) {
+	public void setStyle(ArrayList style) {
 		this.style = style;
+	}
+	
+	public ArrayList getFabric_type() {
+		return fabric_type;
+	}
+	
+	public void setFabric_type(ArrayList fabric_type) {
+		this.fabric_type = fabric_type;
+	}
+	
+	public ArrayList getProduct_description() {
+		return product_description;
+	}
+	
+	public void setProduct_description(ArrayList product_description) {
+		this.product_description = product_description;
+	}
+	
+	public ArrayList getColor_code() {
+		return color_code;
+	}
+	
+	public void setColor_code(ArrayList color_code) {
+		this.color_code = color_code;
+	}
+	
+	public ArrayList getPattern() {
+		return pattern;
+	}
+	
+	public void setPattern(ArrayList pattern) {
+		this.pattern = pattern;
+	}
+	
+	public ArrayList getFinish_type() {
+		return finish_type;
+	}
+	
+	public void setFinish_type(ArrayList finish_type) {
+		this.finish_type = finish_type;
 	}
 }

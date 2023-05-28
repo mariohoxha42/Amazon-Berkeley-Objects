@@ -2,18 +2,20 @@ package org.mario.model.raw;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import java.util.ArrayList;
+
 @JsonIgnoreProperties(ignoreUnknown = true)
 public abstract class AboCoreMetadata {
 	private String country;
 	private String domain_name;
 	private String item_id;
-	private String item_name;
+	private ArrayList item_name;
 	private String marketplace;
-	private String product_type;
-	private String brand;
+	private ArrayList product_type;
+	private ArrayList brand;
 	private String main_image_id;
-	private String node;
-	private String other_image_id;
+	private ArrayList node;
+	private ArrayList other_image_id;
 	
 	public String getCountry() {
 		return country;
@@ -39,36 +41,12 @@ public abstract class AboCoreMetadata {
 		this.item_id = item_id;
 	}
 	
-	public String getItem_name() {
-		return item_name;
-	}
-	
-	public void setItem_name(String item_name) {
-		this.item_name = item_name;
-	}
-	
 	public String getMarketplace() {
 		return marketplace;
 	}
 	
 	public void setMarketplace(String marketplace) {
 		this.marketplace = marketplace;
-	}
-	
-	public String getProduct_type() {
-		return product_type;
-	}
-	
-	public void setProduct_type(String product_type) {
-		this.product_type = product_type;
-	}
-	
-	public String getBrand() {
-		return brand;
-	}
-	
-	public void setBrand(String brand) {
-		this.brand = brand;
 	}
 	
 	public String getMain_image_id() {
@@ -79,19 +57,43 @@ public abstract class AboCoreMetadata {
 		this.main_image_id = main_image_id;
 	}
 	
-	public String getOther_image_id() {
-		return other_image_id;
+	public ArrayList getItem_name() {
+		return item_name;
 	}
 	
-	public void setOther_image_id(String other_image_id) {
-		this.other_image_id = other_image_id;
+	public void setItem_name(ArrayList item_name) {
+		this.item_name = item_name;
 	}
 	
-	public String getNode() {
+	public ArrayList getProduct_type() {
+		return product_type;
+	}
+	
+	public void setProduct_type(ArrayList product_type) {
+		this.product_type = product_type;
+	}
+	
+	public ArrayList getBrand() {
+		return brand;
+	}
+	
+	public void setBrand(ArrayList brand) {
+		this.brand = brand;
+	}
+	
+	public ArrayList getNode() {
 		return node;
 	}
 	
-	public void setNode(String node) {
+	public void setNode(ArrayList node) {
 		this.node = node;
+	}
+	
+	public ArrayList getOther_image_id() {
+		return other_image_id;
+	}
+	
+	public void setOther_image_id(ArrayList other_image_id) {
+		this.other_image_id = other_image_id;
 	}
 }

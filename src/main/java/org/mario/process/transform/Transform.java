@@ -25,25 +25,25 @@ public class Transform {
 			processedCore.setItem_id(aboCoreMetadata.getItem_id());
 		}
 		if (aboCoreMetadata.getItem_name() != null) {
-			processedCore.setItem_name(aboCoreMetadata.getItem_name());
+			processedCore.setItem_name(String.valueOf(aboCoreMetadata.getItem_name()));
 		}
 		if (aboCoreMetadata.getMarketplace() != null) {
 			processedCore.setMarketplace(aboCoreMetadata.getMarketplace());
 		}
 		if (aboCoreMetadata.getProduct_type() != null) {
-			processedCore.setProduct_type(aboCoreMetadata.getProduct_type());
+			processedCore.setProduct_type(String.valueOf(aboCoreMetadata.getProduct_type()));
 		}
 		if (aboCoreMetadata.getBrand() != null) {
-			processedCore.setBrand(aboCoreMetadata.getBrand());
+			processedCore.setBrand(String.valueOf(aboCoreMetadata.getBrand()));
 		}
 		if (aboCoreMetadata.getMain_image_id() != null) {
 			processedCore.setMain_image_id(aboCoreMetadata.getMain_image_id());
 		}
 		if (aboCoreMetadata.getNode() != null) {
-			processedCore.setNode(aboCoreMetadata.getNode());
+			processedCore.setNode(String.valueOf(aboCoreMetadata.getNode()));
 		}
 		if (aboCoreMetadata.getOther_image_id() != null) {
-			processedCore.setOther_image_id(aboCoreMetadata.getOther_image_id());
+			processedCore.setOther_image_id(String.valueOf(aboCoreMetadata.getOther_image_id()));
 		}
 	}
 	
@@ -56,6 +56,10 @@ public class Transform {
 		
 		String tempModelId = (String) map.get("3dmodel_id");
 		
+//		if (map.get("finish_type") != null) {
+//			System.out.println("hit");
+//		}
+
 		AboItemMetadata aboItemMetadata = objectMapper.convertValue(map, AboItemMetadata.class);
 		AboModelMetadata aboModelMetadata = objectMapper.convertValue(map, AboModelMetadata.class);
 		AboProductMetadata aboProductMetadata = objectMapper.convertValue(map, AboProductMetadata.class);
@@ -68,16 +72,16 @@ public class Transform {
 		
 		//Processed Item Settings
 		if (aboItemMetadata.getItem_dimensions() != null) {
-			processedItem.setItem_dimensions(aboItemMetadata.getItem_dimensions());
+			processedItem.setItem_dimensions(String.valueOf(aboItemMetadata.getItem_dimensions()));
 		}
 		if (aboItemMetadata.getItem_keywords() != null) {
-			processedItem.setItem_keywords(aboItemMetadata.getItem_keywords());
+			processedItem.setItem_keywords(String.valueOf(aboItemMetadata.getItem_keywords()));
 		}
 		if (aboItemMetadata.getItem_shape() != null) {
-			processedItem.setItem_shape(aboItemMetadata.getItem_shape());
+			processedItem.setItem_shape(String.valueOf(aboItemMetadata.getItem_shape()));
 		}
 		if (aboItemMetadata.getItem_weight() != null) {
-			processedItem.setItem_weight(aboItemMetadata.getItem_weight());
+			processedItem.setItem_weight(String.valueOf(aboItemMetadata.getItem_weight()));
 		}
 		
 		//Processed Model Settings
@@ -85,13 +89,13 @@ public class Transform {
 			processedModel.setModel_id(aboModelMetadata.getModel_id());
 		}
 		if (aboModelMetadata.getModel_name() != null) {
-			processedModel.setModel_name(aboModelMetadata.getModel_name());
+			processedModel.setModel_name(String.valueOf(aboModelMetadata.getModel_name()));
 		}
 		if (aboModelMetadata.getModel_number() != null) {
-			processedModel.setModel_number(aboModelMetadata.getModel_number());
+			processedModel.setModel_number(String.valueOf(aboModelMetadata.getModel_number()));
 		}
 		if (aboModelMetadata.getModel_year() != null) {
-			processedModel.setModel_year(aboModelMetadata.getModel_year());
+			processedModel.setModel_year(String.valueOf(aboModelMetadata.getModel_year()));
 		}
 		if (aboModelMetadata.getSpin_id() != null) {
 			processedModel.setSpin_id(aboModelMetadata.getSpin_id());
@@ -99,31 +103,31 @@ public class Transform {
 		
 		//Processed Product Settings
 		if (aboProductMetadata.getBullet_point() != null) {
-			processedProduct.setBullet_point(aboProductMetadata.getBullet_point());
+			processedProduct.setBullet_point(String.valueOf(aboProductMetadata.getBullet_point()));
 		}
 		if (aboProductMetadata.getColor() != null) {
-			processedProduct.setColor(aboProductMetadata.getColor());
+			processedProduct.setColor(String.valueOf(aboProductMetadata.getColor()));
 		}
 		if (aboProductMetadata.getColor_code() != null) {
-			processedProduct.setColor_code(aboProductMetadata.getColor_code());
+			processedProduct.setColor_code(String.valueOf(aboProductMetadata.getColor_code()));
 		}
 		if (aboProductMetadata.getFabric_type() != null) {
-			processedProduct.setFabric_type(aboProductMetadata.getFabric_type());
+			processedProduct.setFabric_type(String.valueOf(aboProductMetadata.getFabric_type()));
 		}
 		if (aboProductMetadata.getFinish_type() != null) {
-			processedProduct.setFinish_type(aboProductMetadata.getFinish_type());
+			processedProduct.setFinish_type(String.valueOf(aboProductMetadata.getFinish_type()));
 		}
 		if (aboProductMetadata.getMaterial() != null) {
-			processedProduct.setMaterial(aboProductMetadata.getMaterial());
+			processedProduct.setMaterial(String.valueOf(aboProductMetadata.getMaterial()));
 		}
 		if (aboProductMetadata.getPattern() != null) {
-			processedProduct.setPattern(aboProductMetadata.getPattern());
+			processedProduct.setPattern(String.valueOf(aboProductMetadata.getPattern()));
 		}
 		if (aboProductMetadata.getProduct_description() != null) {
-			processedProduct.setProduct_description(aboProductMetadata.getProduct_description());
+			processedProduct.setProduct_description(String.valueOf(aboProductMetadata.getProduct_description()));
 		}
 		if (aboProductMetadata.getStyle() != null) {
-			processedProduct.setStyle(aboProductMetadata.getStyle());
+			processedProduct.setStyle(String.valueOf(aboProductMetadata.getStyle()));
 		}
 		
 		aboCollection.setProcessedItem(processedItem);
