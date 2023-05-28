@@ -1,5 +1,6 @@
 package org.mario;
 
+import org.apache.spark.sql.SparkSession;
 import org.mario.process.analyze.AnalysisOrchestrator;
 import org.mario.process.extract.ExtractionOrchestrator;
 
@@ -20,5 +21,7 @@ public class Main {
 		String keySourcePath = String.join("/", keySourceSplit.subList(0, 4));
 		String keyTargetPath = keySourcePath.replace("generated", "key");
 		analysisOrchestrator.analysisOrchestrator(keySourcePath, keyTargetPath);
+		
+		SparkSession spark = SparkSession.builder().master("local").appName("Main Class Initiated").getOrCreate();
 	}
 }
