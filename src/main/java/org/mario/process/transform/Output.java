@@ -1,5 +1,20 @@
 package org.mario.process.transform;
 
-public class Output {
+import org.apache.spark.sql.Dataset;
+import org.apache.spark.sql.Row;
+import org.apache.spark.sql.SparkSession;
+import org.mario.model.raw.AboCoreMetadata;
 
+import java.util.List;
+
+public class Output {
+	public void splitOutputs(List<List> masterList, String savePath) {
+		for (List list : masterList) {
+			Class<? extends AboCoreMetadata> listClass = (Class<? extends AboCoreMetadata>) list.get(0).getClass();
+			Dataset<Row> listDf = SparkSession.active().createDataFrame(list, listClass);
+			String className = listClass.getName().replace(listClass.getPackageName() + ".", "") + "Df";
+			String fullSavePath = savePath + "/" + className + ".txt";
+			listDf.toJavaRDD().map(x -> x.toString()).saveAsTextFile(fullSavePath);
+		}
+	}
 }

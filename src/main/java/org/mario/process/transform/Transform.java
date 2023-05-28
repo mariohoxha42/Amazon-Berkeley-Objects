@@ -55,11 +55,11 @@ public class Transform {
 		ProcessedProduct processedProduct = new ProcessedProduct();
 		
 		String tempModelId = (String) map.get("3dmodel_id");
-		
+
 //		if (map.get("finish_type") != null) {
 //			System.out.println("hit");
 //		}
-
+		
 		AboItemMetadata aboItemMetadata = objectMapper.convertValue(map, AboItemMetadata.class);
 		AboModelMetadata aboModelMetadata = objectMapper.convertValue(map, AboModelMetadata.class);
 		AboProductMetadata aboProductMetadata = objectMapper.convertValue(map, AboProductMetadata.class);

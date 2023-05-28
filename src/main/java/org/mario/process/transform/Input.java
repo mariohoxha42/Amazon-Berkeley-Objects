@@ -51,7 +51,7 @@ public class Input {
 			} else {
 				File newFolder = file;
 				for (File dirFile : Objects.requireNonNull(newFolder.listFiles())) {
-					String newInputFolder = newFolder.getPath().replace("\\","/");
+					String newInputFolder = newFolder.getPath().replace("\\", "/");
 					String individualSourceFilePath = newInputFolder.replaceAll("src/.*/resources/", "");
 					String individualSourceFileName = individualSourceFilePath + "/" + dirFile.getName();
 					String inputString = readFile(individualSourceFileName, this.getClass());
