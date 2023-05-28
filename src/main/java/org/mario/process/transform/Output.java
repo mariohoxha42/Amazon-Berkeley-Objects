@@ -14,7 +14,7 @@ public class Output {
 			Dataset<Row> listDf = SparkSession.active().createDataFrame(list, listClass);
 			String className = listClass.getName().replace(listClass.getPackageName() + ".", "") + "Df";
 			String fullSavePath = savePath + "/" + className + ".txt";
-			listDf.toJavaRDD().map(x -> x.toString()).saveAsTextFile(fullSavePath);
+			listDf.toJavaRDD().map(Row::toString).saveAsTextFile(fullSavePath);
 		}
 	}
 }
