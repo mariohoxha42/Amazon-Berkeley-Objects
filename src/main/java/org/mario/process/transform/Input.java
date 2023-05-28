@@ -2,7 +2,6 @@ package org.mario.process.transform;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
-import org.apache.spark.sql.SparkSession;
 import org.mario.model.common.AboCollection;
 import org.mario.model.processed.ProcessedItem;
 import org.mario.model.processed.ProcessedModel;
@@ -18,7 +17,7 @@ import static org.mario.process.utils.Utils.readFile;
 
 public class Input {
 	
-	public List<List> readFiles(SparkSession spark, String inputFolder) throws IOException {
+	public List<List> readFiles(String inputFolder) throws IOException {
 		
 		Gson gson = new Gson();
 		Transform transform = new Transform();
