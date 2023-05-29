@@ -34,6 +34,7 @@ public class KeyAnalysis {
 		File folder = new File(keySourcePath);
 		File[] files = folder.listFiles();
 		
+		assert files != null;
 		for (File file : files) {
 			if (file.isFile()) {
 				String individualKeySourceFilePath = keySourcePath.replaceAll("src/.*/resources/", "");

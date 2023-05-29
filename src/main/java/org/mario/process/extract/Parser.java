@@ -17,6 +17,7 @@ public class Parser {
 		
 		String fullPath = individualRawFilePath + "/" + individualRawFileName;
 		InputStream is = ExtractionOrchestrator.class.getClassLoader().getResourceAsStream(fullPath);
+		assert is != null;
 		Reader inputReader = new InputStreamReader(is, StandardCharsets.UTF_8);
 		
 		Gson gson = new GsonBuilder().create();
@@ -41,6 +42,7 @@ public class Parser {
 		File folder = new File(rawFolderName);
 		File[] files = folder.listFiles();
 		
+		assert files != null;
 		for (File file : files) {
 			if (file.isFile()) {
 				String individualRawFilePath = rawFolderName.replaceAll("src/.*/resources/", "");
