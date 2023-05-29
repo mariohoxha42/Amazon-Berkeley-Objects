@@ -1,5 +1,6 @@
 package org.mario;
 
+import org.apache.spark.sql.SparkSession;
 import org.mario.process.transform.Input;
 import org.mario.process.transform.Output;
 import org.testng.annotations.Test;
@@ -15,5 +16,12 @@ public class tempTransform {
 		String inputFolder = "src/test/resources/generated-test-files";
 		List<List> returnList =  input.readFiles(inputFolder);
 		output.splitOutputs(returnList,inputFolder);
+	}
+	
+	@Test
+	public void testSpark() {
+		SparkSession spark = SparkSession.builder().master("local")
+				.appName("App")
+				.getOrCreate();
 	}
 }
