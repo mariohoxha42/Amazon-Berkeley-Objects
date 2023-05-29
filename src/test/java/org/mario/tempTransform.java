@@ -1,6 +1,7 @@
 package org.mario;
 
 import org.mario.process.transform.Input;
+import org.mario.process.transform.Output;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
@@ -10,7 +11,9 @@ public class tempTransform {
 	@Test
 	public void testInput() throws IOException {
 		Input input = new Input();
+		Output output = new Output();
 		String inputFolder = "src/test/resources/generated-test-files";
 		List<List> returnList =  input.readFiles(inputFolder);
+		output.splitOutputs(returnList,inputFolder);
 	}
 }
