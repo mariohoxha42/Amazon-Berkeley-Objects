@@ -19,7 +19,9 @@ public class Output {
 			Dataset<Row> listDf = spark.createDataFrame(list, listClass);
 			String className = listClass.getName().replace(listClass.getPackageName() + ".", "") + "Df";
 			String fullSavePath = processedPath + "/" + className + ".txt";
-			listDf.toJavaRDD().map(Row::toString).saveAsTextFile(fullSavePath);
+			listDf.show();
+			System.out.println(fullSavePath);
+//			listDf.toJavaRDD().map(Row::toString).saveAsTextFile(fullSavePath);
 		}
 	}
 }

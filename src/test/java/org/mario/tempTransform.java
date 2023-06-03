@@ -3,12 +3,13 @@ package org.mario;
 import org.apache.spark.sql.SparkSession;
 import org.mario.process.transform.Input;
 import org.mario.process.transform.Output;
+import org.testng.annotations.Test;
 
 import java.io.IOException;
 import java.util.List;
 
 public class tempTransform {
-//	@Test
+	@Test
 	public void testInput() throws IOException {
 		Input input = new Input();
 		Output output = new Output();
