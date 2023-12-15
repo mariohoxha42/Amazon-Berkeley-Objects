@@ -1,6 +1,6 @@
 ---
-build:
-  - .github/**/*
+#build:
+#  - .github/**/*
 
 main-code:
   - src/main/**/*
@@ -16,3 +16,18 @@ test-files:
 
 dependencies:
   - pom.xml
+
+main-class:
+  - src/main/java/org/mario/Main.java
+
+analyze:
+  - src/main/java/org/mario/analyze/**/*
+
+extract:
+  - src/main/java/org/mario/extract/**/*
+
+transform:
+  - src/main/java/org/mario/transform/**/*
+
+utils:
+  - src/main/java/org/mario/utils/**/*
