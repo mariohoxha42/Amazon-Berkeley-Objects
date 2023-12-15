@@ -5,8 +5,8 @@ item_keywords
 pattern
 item_weight
 domain_name
-item_shape
 model_name
+item_shape
 bullet_point
 item_dimensions
 model_number
