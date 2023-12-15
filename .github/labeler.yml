@@ -1,6 +1,6 @@
 ---
-build:
-  - .github/**/*
+#build:
+#  - .github/**/*
 
 main-code:
   - src/main/**/*
