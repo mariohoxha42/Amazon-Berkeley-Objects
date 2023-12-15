@@ -1,10 +1,7 @@
 package org.mario.process.transform;
 
-import org.apache.spark.sql.Dataset;
-import org.apache.spark.sql.Row;
 import org.mario.model.raw.AboCoreMetadata;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Output {
@@ -14,7 +11,7 @@ public class Output {
 //				.appName("Spark Session Example")
 //				.getOrCreate();
 //		SQLContext sqlContext = sparkSession.sqlContext();
-		List<Dataset<Row>> finalList = new ArrayList<>();
+//		List<Dataset<Row>> finalList = new ArrayList<>();
 		for (List list : masterList) {
 			String processedPath = savePath.replace("generated", "processed");
 			Class<? extends AboCoreMetadata> listClass = (Class<? extends AboCoreMetadata>) list.get(0).getClass();
